@@ -1,33 +1,142 @@
-# Remove-Vulgar
-This is a plugin (chrome extension) designed to eliminate any vulgar words that may be present in any site or article we open. This will assist in keeping a small youngster away from a potentially harmful situation.
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Traversy Media Quick Launcher</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* Modal Structure */
 
-## To download this extension you need to :
+      html,
+      body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        margin: 0;
+        min-height: 180px;
+        padding: 0;
+        width: 384px;
+      }
 
-1. Get the code at the first place, you may get it by hitting the **Click** button(above) and then downloading the zip file.
+      h1 {
+        font-family: "Menlo", monospace;
+        font-size: 22px;
+        font-weight: 400;
+        margin: 0;
+        color: #2f5876;
+      }
 
-2. Now that a zip file has been downloaded to your computer, you must extract it. If you're running a LINUX distribution, right-click on the folder and select Extract Here from the menu. By extracting we mean you are unzipping the folder.
+      a:link,
+      a:visited {
+        color: #000000;
+        outline: 0;
+        text-decoration: none;
+      }
 
-3. Know  launch Chrome and navigate to the Extensions tab. Enable developer mode, then click on the option to load unpacked. You must now choose the extracted file. 
+      img {
+        width: 30px;
+      }
 
-4. If it is not enabled by default, enable it.  Congrats you have downloaded the extension.
+      .modal-header {
+        align-items: center;
+        border-bottom: 0.5px solid #dadada;
+      }
 
+      .modal-content {
+        padding: 0 22px;
+      }
 
+      .modal-icons {
+        border-top: 0.5px solid #dadada;
+        height: 50px;
+        width: 100%;
+      }
 
+      .logo {
+        padding: 16px;
+      }
 
+      .logo-icon {
+        vertical-align: text-bottom;
+        margin-right: 12px;
+      }
 
+      .version {
+        color: #444;
+        font-size: 18px;
+      }
 
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 22px;
+      }
 
-***HAPPY BROWSING!!!***
+      .flex {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+        width: 120px;
+      }
 
-<h2>Example of code</h2>
+      .flex:hover {
+        opacity: 0.4;
+      }
 
-<pre>
-    <div class="container">
-        <div class="block two first">
-            <h2>Your title</h2>
-            <div class="wrap">
-            //Your content
-            </div>
-        </div>
+      .flex .fa {
+        font-size: 40px;
+        color: #2f5876;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+    <div class="modal-header">
+      <h1 class="logo">
+        <img class="logo-icon" src="images/traversy-logo.png" />Traversy
+        Launcher
+        <span class="version">(1.0.0)</span>
+      </h1>
     </div>
-</pre>
+    <div class="modal-content">
+      <p>Easily Access Traversy Media content</p>
+    </div>
+    <div class="modal-icons">
+      <div class="flex-container">
+        <div class="flex">
+          <a href="https://www.traversymedia.com" target="_blank">
+            <i class="fa fa-globe" style="color:darksalmon "></i>
+          </a>
+        </div>
+        <div class="flex">
+          <a href="https://www.youtube.com/traversymedia" target="_blank">
+            <i class="fa fa-youtube" style="color:darksalmon "></i>
+          </a>
+        </div>
+        <div class="flex">
+          <a href="https://www.twitter.com/traversymedia" target="_blank">
+            <i class="fa fa-twitter" style="color:darksalmon "></i>
+          </a>
+        </div>
+        <div class="flex">
+          <a href="https://www.facebook.com/traversymedia" target="_blank">
+            <i class="fa fa-facebook" style="color:darksalmon "></i>
+          </a>
+        </div>
+        <div class="flex">
+          <a href="https://www.github.com/bradtraversy" target="_blank">
+            <i class="fa fa-github" style="color:darksalmon "></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
